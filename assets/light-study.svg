@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <radialGradient id="ambient-core" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.28" />
+      <stop offset="35%" stop-color="#f43f5e" stop-opacity="0.18" />
+      <stop offset="65%" stop-color="#8b5cf6" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#050507" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="specular-accent" cx="42%" cy="38%" r="30%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.15" />
+      <stop offset="50%" stop-color="#fb7185" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#050507" stop-opacity="0" />
+    </radialGradient>
+    <filter id="atmospheric-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="60" />
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#050507" />
+  
+  <g filter="url(#atmospheric-blur)">
+    <!-- Deep luminous background aura -->
+    <ellipse cx="600" cy="380" rx="460" ry="260" fill="url(#ambient-core)" />
+    <!-- Secondary chromatic bloom -->
+    <ellipse cx="520" cy="340" rx="280" ry="170" fill="url(#specular-accent)" />
+    <circle cx="680" cy="420" r="160" fill="#a855f7" opacity="0.12" />
+  </g>
+</svg>
